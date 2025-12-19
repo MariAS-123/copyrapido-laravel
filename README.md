@@ -1,43 +1,31 @@
-Tarea: Desarrollo en Plataformas
-Fecha: 19/12/2025
-Estudiante: María Paulina Astudillo
-Paralelo: 2
+# Prueba: Desarrollo en Plataformas
+**Caso 14: CopyRapido**
 
-MIS DECISIONES DE DISEÑO
+**Fecha:** 19/12/2025  
+**Estudiante:** María Paulina Astudillo  
+**Paralelo:** 2
 
-Tabla: trabajos_especiales
+## Mis decisiones de diseño
 
-Campos de la tabla:
+### Nombre de la tabla
+**trabajos_especiales**
 
-	id
-	Tipo: int
-	Obligatorio: Sí
+### Campos de la tabla
 
-	descripcion
-	Tipo: varchar(200)
-	Obligatorio: Sí
+| Campo          | Tipo          | Obligatorio |
+|----------------|---------------|-------------|
+| id             | int           | Sí          |
+| descripcion    | varchar(200)  | Sí          |
+| nombre_cliente | varchar(100)  | Sí          |
+| telefono       | varchar(10)   | Sí          |
+| fecha_entrega  | date          | Sí          |
+| estado         | varchar(20)   | Sí          |
 
-	nombre_cliente
-	Tipo: varchar(100)
-	Obligatorio: Sí
+### ¿Se pueden eliminar registros?
+**No**
 
-	telefono
-	Tipo: varchar(10)
-	Obligatorio: Sí
+### Razón
+Se utiliza borrado lógico mediante el estado **"cancelado"** para conservar el historial de trabajos por posibles reclamos de los clientes.
 
-	fecha_entrega
-	Tipo: date
-	Obligatorio: Sí
-
-	estado
-	Tipo: varchar(20)
-	Obligatorio: Sí
-
-¿Se pueden eliminar registros?
-No
-
-Razón:
-Se utiliza borrado lógico mediante el estado "cancelado" para conservar el historial de trabajos por posibles reclamos de los clientes.
-
-Repositorio del proyecto:
+### Repositorio del proyecto
 https://github.com/MariAS-123/copyrapido-laravel.git
