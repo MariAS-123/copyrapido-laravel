@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\TrabajoEspecialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('trabajos.index');
 });
+
+Route::resource('trabajos',TrabajoEspecialController::class, );
